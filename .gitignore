@@ -1,0 +1,11 @@
+#Learn more about Jenkins and JENKINS_HOME directory for which this file is intended.
+#  http://jenkins-ci.org/
+#  https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins
+
+#ignore all JENKINS_HOME except config files.
+/*
+!/
+!/.gitignore
+!/docker-compose.yml
+!/Jenkinsfile
+!/LICENSE

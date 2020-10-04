@@ -1,14 +1,14 @@
 pipeline {
   agent {
     docker {
-      image 'hello-world'
+      image 'alpine'
     }
 
   }
   stages {
     stage('test') {
       steps {
-        sh 'docker --version'
+        sh 'uname -a'
       }
     }
 

@@ -13,8 +13,8 @@ services:
       jenkins:
         aliases:
           - docker
-    ports:
-      - "192.168.0.201:2376:2376"
+    # ports:
+    #   - "2376:2376"
     restart: unless-stopped
 
   jenkins-blueocean:
@@ -29,8 +29,7 @@ services:
     networks:
       - jenkins
     ports:
-      - "192.168.0.201:8080:8080"
-      # - "192.168.0.201:50000:50000"
+      - "8080:8080"
     restart: unless-stopped
     depends_on:
       - jenkins-docker

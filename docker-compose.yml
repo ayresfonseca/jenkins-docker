@@ -1,8 +1,9 @@
+---
 version: '3.3'
 services:
 
   jenkins-docker:
-    image: docker:dind 
+    image: docker:dind
     privileged: true
     environment:
       - DOCKER_TLS_CERTDIR=/certs
@@ -18,7 +19,7 @@ services:
     restart: unless-stopped
 
   jenkins-blueocean:
-    image: jenkinsci/blueocean 
+    image: jenkinsci/blueocean
     environment:
       - DOCKER_HOST=tcp://docker:2376
       - DOCKER_CERT_PATH=/certs/client
